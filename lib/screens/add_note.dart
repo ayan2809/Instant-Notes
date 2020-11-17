@@ -13,7 +13,7 @@ class _AddNoteState extends State<AddNote> {
       appBar: AppBar(
         title: Text("Add Notes"),
       ),
-      body: ,
+
 
     );
   }
