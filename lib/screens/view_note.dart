@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:instant_notes/screens/add_note.dart';
 import 'package:instant_notes/screens/reusable_card.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:instant_notes/screens/registration_screen.dart';
 
 class ViewNote extends StatefulWidget {
   static String id='view_note';
@@ -12,7 +11,7 @@ class ViewNote extends StatefulWidget {
 
 class _ViewNoteState extends State<ViewNote> {
   final _auth =FirebaseAuth.instance;
-  FirebaseUser loggedInUser;
+  User loggedInUser;
 
   @override
   void initState() {
@@ -34,6 +33,12 @@ class _ViewNoteState extends State<ViewNote> {
       home: Scaffold(
         backgroundColor: Colors.black,
         appBar: AppBar(
+          actions: <Widget>[
+            IconButton(icon: Icon(Icons.close), onPressed:(){
+              _auth.signOut();
+              Navigator.pop(context);
+            })
+          ],
           title: Text("View Notes"),
         ),
         body: Column(
