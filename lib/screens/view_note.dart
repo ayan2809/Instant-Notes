@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:instant_notes/screens/add_note.dart';
 import 'package:instant_notes/screens/reusable_card.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:instant_notes/screens/registration_screen.dart';
+
 class ViewNote extends StatefulWidget {
   static String id='view_note';
   @override
@@ -8,6 +11,23 @@ class ViewNote extends StatefulWidget {
 }
 
 class _ViewNoteState extends State<ViewNote> {
+  final _auth =FirebaseAuth.instance;
+  FirebaseUser loggedInUser;
+
+  @override
+  void initState() {
+    getCurrentUser();
+    super.initState();
+  }
+
+  void getCurrentUser() async {
+    final user= await _auth.currentUser;
+    if(user !=null){
+      loggedInUser =user;
+      print(loggedInUser.email);
+    }
+
+  }
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
