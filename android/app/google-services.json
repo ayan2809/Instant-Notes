@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "603127281229",
+    "firebase_url": "https://insta-notes-f9966.firebaseio.com",
+    "project_id": "insta-notes-f9966",
+    "storage_bucket": "insta-notes-f9966.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:603127281229:android:460558e5148fd18c0a8e04",
+        "android_client_info": {
+          "package_name": "com.ayan28.instant_notes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "603127281229-nm3g1hevhjrofqcpga4ch1cl3itkbsap.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCHfmzwjL4pkFVzWricUvElFarYumQo3d8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "603127281229-nm3g1hevhjrofqcpga4ch1cl3itkbsap.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
